@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Site Haritası Bağlantısı
+Sitemap: https://daisysackaynak.com/sitemap.xml
