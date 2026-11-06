@@ -1,483 +1,283 @@
-<!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Temel SEO & Meta Etiketleri -->
-  <title>Bursa Saç Kaynak — Daisy Saç Kaynak Merkezi | Mikro & Görünmez Kaynak</title>
-  <meta name="description" content="Bursa saç kaynak uzmanı Daisy Saç Kaynak Merkezi: Osmangazi'de %100 gerçek insan saçı, görünmez mikro kaynak uygulaması ve 50-70 cm özel paketler. Hemen randevu alın.">
-  <meta name="keywords" content="bursa saç kaynak, mikro kaynak bursa, görünmez kaynak bursa, medikal saç kaynak bursa, daisy saç kaynak merkezi, osmangazi saç kaynak, hanife tosun">
-  <meta name="author" content="Daisy Saç Kaynak Merkezi">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://daisysackaynak.com/">
-
-  <!-- Open Graph / Sosyal Medya & WhatsApp Paylaşım Kartları -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="tr_TR">
-  <meta property="og:title" content="Bursa Saç Kaynak — Daisy Saç Kaynak Merkezi">
-  <meta property="og:description" content="Bursa Osmangazi'de uzman uygulama: %100 gerçek insan saçı, dışarıdan fark edilmeyen görünmez mikro kaynak ve hafif kullanım konforu.">
-  <meta property="og:url" content="https://daisysackaynak.com/">
-  <meta property="og:site_name" content="Daisy Saç Kaynak Merkezi">
-  <meta property="og:image" content="https://daisysackaynak.com/assets/logo.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Google Analytics 4 (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q5XW2C3N5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6Q5XW2C3N5');
-  </script>
-
-  <!-- Schema.org Yapılandırılmış Veri (JSON-LD: LocalBusiness & FAQPage) -->
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "@id": "https://daisysackaynak.com/#salon",
-      "name": "Bursa Saç Kaynak Merkezi (Daisy Hair)",
-      "alternateName": "Daisy Saç Kaynak Merkezi",
-      "image": "https://daisysackaynak.com/assets/logo.png",
-      "url": "https://daisysackaynak.com/",
-      "telephone": "+905072825248",
-      "priceRange": "₺₺₺",
-      "hasMap": "https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29",
-      "founder": {
-        "@type": "Person",
-        "name": "Hanife Tosun",
-        "jobTitle": "Saç Kaynak Uzmanı"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Tahtakale, İnebey Sk. Türel Apt. Kat: 1 Daire: 1",
-        "addressLocality": "Osmangazi",
-        "addressRegion": "Bursa",
-        "postalCode": "16000",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.1834,
-        "longitude": 29.0610
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "19:30"
+<!-- Ortalı Logo ve Marka Alanı -->
+<header class="flex flex-col items-center justify-center text-center space-y-3">
+  <div class="relative w-24 h-24 rounded-full bg-white p-2 shadow-sm border border-neutral-200/90 flex items-center justify-center overflow-hidden">
+    <img 
+      id="main-logo-img" 
+      src="assets/logo.png" 
+      alt="Daisy Saç Kaynak Merkezi Bursa Logosu" 
+      width="96" 
+      height="96" 
+      class="w-full h-full object-contain rounded-full transition-opacity duration-300"
+      onerror="
+        if (!this.dataset.step) {
+          this.dataset.step = '1';
+          this.src = 'assets/logo.jpg';
+        } else if (this.dataset.step === '1') {
+          this.dataset.step = '2';
+          this.src = 'assets/logo.webp';
+        } else {
+          this.style.display = 'none';
+          const fb = document.getElementById('fallback-icon');
+          if (fb) { fb.classList.remove('hidden'); fb.classList.add('flex'); }
+          if (window.lucide) { lucide.createIcons(); }
         }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "165"
-      },
-      "sameAs": [
-        "https://www.instagram.com/daisys.sackaynakmerkezi/",
-        "https://wa.me/905072825248",
-        "https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29"
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Mikro kaynak kendi saçıma zarar verir mi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hayır. Uzman ellerde doğru gramaj dağılımı ile uygulanan mikro ve görünmez kaynak saç köklerinize yük bindirmez, dökülmeye veya kopmaya sebep olmaz."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kullanılan saçlar %100 gerçek insan saçı mı?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet, merkezimizde yalnızca %100 gerçek, işlenmemiş doğal insan saçı kullanılır. Fön, boya, açma ve maşa gibi tüm kuaför işlemlerine tam uygundur."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kaynakların kullanım süresi ne kadardır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kendi saçınızın uzama hızına bağlı olarak ortalama 3 ila 4 ay rahatlıkla kullanılır. Süre sonunda saçlar sökülüp tekrar yukarı çekilerek (bakım yapılarak) uzun yıllar kullanılabilir."
-          }
-        }
-      ]
-    }
-  ]
-  </script>
-</head>
-<body class="bg-neutral-100 text-neutral-900 antialiased min-h-screen flex flex-col justify-between selection:bg-amber-100 selection:text-amber-900 pb-20 sm:pb-8">
-
-  <!-- Ana Kapsayıcı Konteyner -->
-  <main class="w-full max-w-lg mx-auto px-4 py-8 sm:py-10 space-y-6">
-
-    <!-- Ortalı Logo ve Marka Alanı -->
-    <header class="flex flex-col items-center justify-center text-center space-y-3">
-      <div class="relative w-24 h-24 rounded-full bg-white p-2 shadow-sm border border-neutral-200/90 flex items-center justify-center overflow-hidden">
-        <!-- Akıllı Logo Yükleyici: logo.png, logo.jpg, logo.webp veya orijinal Türkçe adı otomatik sırayla dener -->
-        <img 
-          id="main-logo-img"
-          src="assets/logo.png" 
-          alt="Daisy Saç Kaynak Merkezi Bursa Logosu" 
-          width="96" 
-          height="96" 
-          class="w-full h-full object-contain rounded-full transition-opacity duration-300" 
-          onerror="
-            if (!this.dataset.step) {
-              this.dataset.step = '1';
-              this.src = 'assets/logo.jpg';
-            } else if (this.dataset.step === '1') {
-              this.dataset.step = '2';
-              this.src = 'assets/logo.webp';
-            } else if (this.dataset.step === '2') {
-              this.dataset.step = '3';
-              this.src = 'assets/Daisy Saç Kaynak Merkezi Logosu.png';
-            } else if (this.dataset.step === '3') {
-              this.dataset.step = '4';
-              this.src = 'assets/Daisy%20Sa%C3%A7%20Kaynak%20Merkezi%20Logosu.png';
-            } else {
-              this.style.display = 'none';
-              const fb = document.getElementById('fallback-icon');
-              if (fb) { fb.classList.remove('hidden'); fb.classList.add('flex'); }
-              if (window.lucide) { lucide.createIcons(); }
-            }
-          "
-        >
-        <!-- Logo dosyası klasörde bulunamazsa devreye giren şık yedek ikon -->
-        <div id="fallback-icon" class="hidden w-full h-full items-center justify-center text-amber-600">
-          <i data-lucide="sparkles" class="w-10 h-10"></i>
-        </div>
-      </div>
-
-      <!-- Tek H1 -->
-      <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-neutral-900 leading-snug">
-        <span class="block text-neutral-900">Bursa Saç Kaynak</span>
-        <span class="inline-block whitespace-nowrap text-amber-700 text-xl sm:text-2xl font-bold mt-1">Daisy Saç Kaynak Merkezi</span>
-      </h1>
-
-      <!-- Değer Önerisi -->
-      <p class="text-xs sm:text-sm text-neutral-600 max-w-sm mx-auto leading-relaxed">
-        Bursa Osmangazi'de uzman uygulama: %100 gerçek insan saçı, dışarıdan fark edilmeyen görünmez mikro kaynak ve hafif kullanım konforu.
-      </p>
-    </header>
-
-    <!-- Hizmet Rozetleri -->
-    <section class="flex flex-wrap justify-center items-center gap-1.5 pt-1" aria-label="Hizmet Alanlarımız">
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200 shadow-sm">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Mikro Kaynak
-      </span>
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200 shadow-sm">
-        <i data-lucide="eye-off" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Görünmez Kaynak
-      </span>
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200 shadow-sm">
-        <i data-lucide="shield-check" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Medikal Kaynak
-      </span>
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200 shadow-sm">
-        <i data-lucide="palette" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Saç Renklendirme
-      </span>
-    </section>
-
-    <!-- Çalışma Saatleri & Durum Rozeti -->
-    <section class="flex items-center justify-center" aria-label="Çalışma Saatleri">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-700 text-xs font-medium shadow-sm">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-        </span>
-        <span class="font-semibold text-emerald-800">Açık</span>
-        <span class="text-neutral-300">•</span>
-        <span>Pzt - Cts: 09:00 - 19:30</span>
-        <span class="text-neutral-300">•</span>
-        <span class="text-neutral-500">Pazar: Kapalı</span>
-      </div>
-    </section>
-
-    <!-- Özel Fiyat Kampanya Kartları -->
-    <section class="space-y-4" aria-label="Özel Kampanya Paketleri">
-
-      <!-- Kampanya 1: 50 cm Paketi -->
-      <article class="p-5 sm:p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm transition-all duration-200">
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-neutral-100 text-neutral-800 border border-neutral-200">
-            Fırsat Paketi
-          </span>
-          <div class="text-right shrink-0">
-            <div class="text-2xl font-black text-neutral-900 leading-none">8.000 ₺</div>
-            <div class="text-[11px] text-amber-800 font-bold mt-1">Takım &amp; İşçilik Dahil</div>
-          </div>
-        </div>
-
-        <h2 class="text-base font-bold text-neutral-900 mb-1.5">50 cm Doğal Saç Kaynak (200 Adet)</h2>
-        
-        <div class="mb-3">
-          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-900 border border-amber-200">
-            <i data-lucide="scale" class="w-3 h-3 text-amber-700"></i> ~140-160 gr Doğal Yoğunluk
-          </span>
-        </div>
-
-        <p class="text-sm text-neutral-700 leading-relaxed mb-4">
-          %100 doğal insan saçı, mikro / görünmez uygulama ve ücretsiz saç analizi dahil komple paket.
-        </p>
-
-        <a 
-          href="https://wa.me/905072825248?text=Merhaba%2C%2050%20cm%20200%20adet%20(8.000%20TL)%20sa%C3%A7%20kaynak%20kampanyas%C4%B1%20i%C3%A7in%20bilgi%20ve%20randevu%20almak%20istiyorum." 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          onclick="if(window.gtag){ gtag('event', 'campaign_click', {'event_category': 'lead', 'event_label': 'kampanya_50cm_8000tl', 'transport_type': 'beacon'}); }" 
-          class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold text-xs sm:text-sm shadow transition duration-200 active:scale-[0.99]"
-        >
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>Bu Paketi WhatsApp'tan Rezerve Et</span>
-        </a>
-      </article>
-
-      <!-- Kampanya 2: 70 cm Paketi -->
-      <article class="p-5 sm:p-6 rounded-2xl bg-white border-2 border-amber-500/90 shadow-md relative overflow-hidden transform sm:scale-[1.01] transition-all duration-200">
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-600 text-white shadow-sm">
-            En Çok Tercih Edilen
-          </span>
-          <div class="text-right shrink-0">
-            <div class="text-2xl font-black text-amber-900 leading-none">9.000 ₺</div>
-            <div class="text-[11px] text-amber-800 font-bold mt-1">Takım &amp; İşçilik Dahil</div>
-          </div>
-        </div>
-
-        <h2 class="text-base font-bold text-neutral-900 mb-1.5">70 cm Doğal Saç Kaynak (200 Adet)</h2>
-
-        <div class="mb-3">
-          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-900 border border-amber-200">
-            <i data-lucide="scale" class="w-3 h-3 text-amber-700"></i> ~180-200 gr Ekstra Dolgun
-          </span>
-        </div>
-
-        <p class="text-sm text-neutral-700 leading-relaxed mb-4">
-          Yoğun hacim ve ekstra uzunluk; %100 doğal saç garantisi ve profesyonel takma işlemi dahil.
-        </p>
-
-        <a 
-          href="https://wa.me/905072825248?text=Merhaba%2C%2070%20cm%20200%20adet%20(9.000%20TL)%20sa%C3%A7%20kaynak%20kampanyas%C4%B1%20i%C3%A7in%20bilgi%20ve%20randevu%20almak%20istiyorum." 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          onclick="if(window.gtag){ gtag('event', 'campaign_click', {'event_category': 'lead', 'event_label': 'kampanya_70cm_9000tl', 'transport_type': 'beacon'}); }" 
-          class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold text-xs sm:text-sm shadow transition duration-200 active:scale-[0.99]"
-        >
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>Bu Paketi WhatsApp'tan Rezerve Et</span>
-        </a>
-      </article>
-
-    </section>
-
-    <!-- Sosyal Kanıt: Google 5.0 Yıldız Kartı -->
-    <section aria-label="Müşteri Değerlendirmeleri">
-      <a 
-        href="https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        onclick="if(window.gtag){ gtag('event', 'google_review_click', {'event_category': 'reputation', 'event_label': 'review_card', 'transport_type': 'beacon'}); }" 
-        class="w-full p-3.5 rounded-xl bg-white border border-neutral-200/90 shadow-sm hover:border-amber-400 transition-all duration-200 flex items-center justify-between group active:scale-[0.99]"
-      >
-        <div class="flex items-center gap-3">
-          <div class="p-2 rounded-lg bg-amber-50 text-amber-600 group-hover:bg-amber-100 transition-colors">
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-500"></i>
-          </div>
-          <div>
-            <div class="flex items-center gap-1 text-amber-500">
-              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
-              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
-              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
-              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
-              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
-              <span class="text-xs font-bold text-neutral-900 ml-1">5.0</span>
-              <span class="text-[11px] text-neutral-500">(165 Google Yorumu)</span>
-            </div>
-            <div class="text-[11px] text-neutral-500 mt-0.5">Google İşletme profilimizdeki gerçek müşteri yorumları</div>
-          </div>
-        </div>
-        <i data-lucide="external-link" class="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 transition-colors"></i>
-      </a>
-    </section>
-
-    <!-- Güven ve Kalite Vurgusu -->
-    <section class="grid grid-cols-2 gap-2 text-center text-xs" aria-label="Neden Bizi Seçmelisiniz">
-      <div class="p-3.5 rounded-xl bg-white border border-neutral-200/80 shadow-sm">
-        <i data-lucide="badge-check" class="w-4 h-4 text-amber-600 mx-auto mb-1"></i>
-        <span class="font-bold text-neutral-900 block">%100 Gerçek Saç</span>
-        <span class="text-[11px] text-neutral-500">İşlem görebilir, boyanabilir</span>
-      </div>
-      <div class="p-3.5 rounded-xl bg-white border border-neutral-200/80 shadow-sm">
-        <i data-lucide="heart-handshake" class="w-4 h-4 text-amber-600 mx-auto mb-1"></i>
-        <span class="font-bold text-neutral-900 block">Dökülmeme Garantisi</span>
-        <span class="text-[11px] text-neutral-500">Konforlu &amp; hafif kullanım</span>
-      </div>
-    </section>
-
-    <!-- Sıkça Sorulan Sorular (SEO & Tereddüt Giderici Accordion) -->
-    <section class="space-y-2 pt-1" aria-label="Sıkça Sorulan Sorular">
-      <div class="text-center mb-1">
-        <span class="text-[11px] font-bold tracking-wider uppercase text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200/70">Merak Edilenler</span>
-      </div>
-      
-      <details class="group bg-white rounded-xl border border-neutral-200/90 p-3.5 text-xs [&_summary::-webkit-details-marker]:hidden">
-        <summary class="flex items-center justify-between cursor-pointer font-bold text-neutral-900">
-          <span>Mikro kaynak kendi saçıma zarar verir mi?</span>
-          <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform"></i>
-        </summary>
-        <p class="mt-2 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-2">
-          Kesinlikle hayır. Uzmanımız Hanife Tosun tarafından doğru gramaj dağılımı ile takılan kaynaklar, saç tellerinize gereksiz ağırlık bindirmez ve dökülme yapmaz.
-        </p>
-      </details>
-
-      <details class="group bg-white rounded-xl border border-neutral-200/90 p-3.5 text-xs [&_summary::-webkit-details-marker]:hidden">
-        <summary class="flex items-center justify-between cursor-pointer font-bold text-neutral-900">
-          <span>Kullanılan saçlar %100 doğal insan saçı mı?</span>
-          <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform"></i>
-        </summary>
-        <p class="mt-2 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-2">
-          Evet. Saçlarımız %100 doğal gerçek insan saçıdır. İstediğiniz renge boyatabilir, açma işlemi uygulayabilir, maşa ve fönle serbestçe şekillendirebilirsiniz.
-        </p>
-      </details>
-
-      <details class="group bg-white rounded-xl border border-neutral-200/90 p-3.5 text-xs [&_summary::-webkit-details-marker]:hidden">
-        <summary class="flex items-center justify-between cursor-pointer font-bold text-neutral-900">
-          <span>Kaynakların kullanım ve bakım süresi nedir?</span>
-          <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform"></i>
-        </summary>
-        <p class="mt-2 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-2">
-          Saçınızın uzama hızına göre 3-4 ay konforla kullanılır. Süre sonunda saçlar özel solüsyonla yıpratılmadan çıkarılır ve tekrar yukarı takılarak uzun yıllar kullanılır.
-        </p>
-      </details>
-    </section>
-
-    <!-- Ana Dönüşüm Butonları: WhatsApp -> Hemen Ara -> Instagram -> Haritalar -->
-    <section class="space-y-3 pt-2" aria-label="İletişim ve Dönüşüm Kanalları">
-
-      <!-- 1. WhatsApp Butonu -->
-      <a 
-        href="https://wa.me/905072825248?text=Merhaba%2C%20sa%C3%A7%20kaynak%20fiyatlar%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        onclick="if(window.gtag){ gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'hero_whatsapp', 'transport_type': 'beacon'}); }" 
-        class="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/20 transition-all duration-200 active:scale-[0.99]"
-      >
-        <i data-lucide="message-circle" class="w-5 h-5"></i>
-        <span>WhatsApp ile Hızlı Randevu Al</span>
-      </a>
-
-      <!-- 2. Hemen Ara Butonu -->
-      <a 
-        href="tel:+905072825248" 
-        onclick="if(window.gtag){ gtag('event', 'phone_call_click', {'event_category': 'lead', 'event_label': 'call_btn', 'transport_type': 'beacon'}); }" 
-        class="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-sm shadow-md transition-all duration-200 active:scale-[0.99]"
-      >
-        <i data-lucide="phone-call" class="w-5 h-5 text-amber-400"></i>
-        <span>Hemen Ara: 0507 282 52 48</span>
-      </a>
-
-      <!-- 3. Instagram Butonu -->
-      <a 
-        href="https://www.instagram.com/daisys.sackaynakmerkezi/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        onclick="if(window.gtag){ gtag('event', 'instagram_click', {'event_category': 'social', 'event_label': 'main_instagram', 'transport_type': 'beacon'}); }" 
-        class="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-semibold text-sm shadow-md shadow-pink-500/15 transition-all duration-200 active:scale-[0.99]"
-      >
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
-        <span>Instagram Sayfamızı İnceleyin</span>
-      </a>
-
-      <!-- 4. Haritalar Yol Tarifi Butonu -->
-      <a 
-        href="https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        onclick="if(window.gtag){ gtag('event', 'directions_click', {'event_category': 'navigation', 'event_label': 'maps_pin', 'transport_type': 'beacon'}); }" 
-        class="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-white border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-medium transition-colors active:scale-[0.99]"
-      >
-        <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
-        <span>Google Haritalar ile Yol Tarifi Al</span>
-      </a>
-
-    </section>
-
-  </main>
-
-  <!-- Mobil Sabit Alt Bar (Sticky Floating CTA: Sayfa Boyunca WhatsApp'ı Ekranda Tutar) -->
-  <div class="fixed bottom-0 inset-x-0 z-50 p-3 bg-white/95 backdrop-blur-md border-t border-neutral-200/90 sm:hidden shadow-[0_-4px_12px_rgba(0,0,0,0.06)]">
-    <div class="max-w-md mx-auto flex items-center gap-2">
-      <a 
-        href="tel:+905072825248" 
-        onclick="if(window.gtag){ gtag('event', 'phone_call_click', {'event_category': 'lead', 'event_label': 'sticky_call', 'transport_type': 'beacon'}); }" 
-        class="p-3 rounded-xl bg-neutral-900 text-amber-400 shrink-0 shadow-sm"
-        aria-label="Telefonla Ara"
-      >
-        <i data-lucide="phone" class="w-5 h-5"></i>
-      </a>
-      <a 
-        href="https://wa.me/905072825248?text=Merhaba%2C%20Daisy%20Sa%C3%A7%20Kaynak%20Merkezi%20fiyatlar%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        onclick="if(window.gtag){ gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'sticky_whatsapp', 'transport_type': 'beacon'}); }" 
-        class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs shadow-md transition-all active:scale-[0.99]"
-      >
-        <i data-lucide="message-circle" class="w-4 h-4"></i>
-        <span>WhatsApp ile Hızlı Randevu Al</span>
-      </a>
+      "
+    >
+    <div id="fallback-icon" class="hidden w-full h-full items-center justify-center text-amber-600">
+      <i data-lucide="sparkles" class="w-10 h-10"></i>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="w-full bg-white border-t border-neutral-200/80 py-6 px-4 mt-8">
-    <div class="max-w-lg mx-auto text-center space-y-2.5 text-xs text-neutral-500">
-      
-      <!-- Adres -->
-      <div class="flex items-center justify-center gap-1.5 font-medium text-neutral-700">
-        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
-        <span>Tahtakale, İnebey Sk. Türel Apt. Kat: 1 Daire: 1, Osmangazi / Bursa</span>
-      </div>
+  <!-- H1 -->
+  <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-neutral-900 leading-snug">
+    <span class="block text-neutral-900">Bursa Saç Kaynak</span>
+    <span class="inline-block whitespace-nowrap text-amber-700 text-xl sm:text-2xl font-bold mt-1">Daisy Saç Kaynak Merkezi</span>
+  </h1>
 
-      <!-- Yetkili & Telefon -->
-      <div>
-        <span>İşletme Yetkilisi: Hanife Tosun</span> &bull; 
-        <a href="tel:+905072825248" class="text-neutral-700 font-semibold hover:underline">0507 282 52 48</a>
-      </div>
+  <!-- Değer Önerisi -->
+  <p class="text-xs sm:text-sm text-neutral-600 max-w-sm mx-auto leading-relaxed">
+    Bursa Osmangazi'de uzman uygulama: %100 gerçek insan saçı, dışarıdan fark edilmeyen görünmez mikro kaynak ve hafif kullanım konforu.
+  </p>
+</header>
 
-      <!-- Telif Hakkı -->
-      <div class="text-[11px] text-neutral-400 pt-1">
-        &copy; 2026 Daisy Saç Kaynak Merkezi. Tüm hakları saklıdır.
+<!-- Hizmet Rozetleri -->
+<section class="flex flex-wrap justify-center items-center gap-1.5 pt-1" aria-label="Hizmet Alanlarımız">
+  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200/80 shadow-sm">
+    <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Mikro Kaynak
+  </span>
+  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200/80 shadow-sm">
+    <i data-lucide="eye-off" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Görünmez Kaynak
+  </span>
+  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200/80 shadow-sm">
+    <i data-lucide="shield-check" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Medikal Kaynak
+  </span>
+  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-neutral-800 border border-neutral-200/80 shadow-sm">
+    <i data-lucide="palette" class="w-3.5 h-3.5 mr-1.5 text-amber-600"></i> Saç Renklendirme
+  </span>
+</section>
+
+<!-- Çalışma Saatleri & Durum Rozeti -->
+<section class="flex items-center justify-center" aria-label="Çalışma Saatleri">
+  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200/80 text-neutral-700 text-xs font-medium shadow-sm">
+    <span class="relative flex h-2 w-2">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+    </span>
+    <span class="font-semibold text-emerald-800">Açık</span>
+    <span class="text-neutral-300">•</span>
+    <span>Pzt - Cts: 09:00 - 19:30</span>
+    <span class="text-neutral-300">•</span>
+    <span class="text-neutral-500">Pazar: Kapalı</span>
+  </div>
+</section>
+
+<!-- Özel Fiyat Kampanya Paketleri -->
+<section class="space-y-4" aria-label="Özel Kampanya Paketleri">
+
+  <!-- Kampanya 1: 50 cm Paketi -->
+  <article class="p-5 sm:p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:shadow-md transition-all duration-200">
+    <div class="flex items-start justify-between gap-2 mb-2">
+      <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-neutral-100 text-neutral-800 border border-neutral-200">
+        Fırsat Paketi
+      </span>
+      <div class="text-right shrink-0">
+        <div class="text-2xl font-black text-neutral-900 leading-none">8.000 ₺</div>
+        <div class="text-[11px] text-amber-800 font-bold mt-1">Takım &amp; İşçilik Dahil</div>
       </div>
     </div>
-  </footer>
 
-  <!-- Lucide İkonlarını Başlatma -->
-  <script>
-    if (window.lucide) {
-      lucide.createIcons();
-    } else {
-      document.addEventListener("DOMContentLoaded", function() {
-        if (window.lucide) lucide.createIcons();
-      });
-    }
-  </script>
-</body>
-</html>
+    <h2 class="text-base font-bold text-neutral-900 mb-1.5">50 cm Doğal Saç Kaynak (200 Adet)</h2>
+    
+    <div class="mb-3">
+      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-900 border border-amber-200/70">
+        <i data-lucide="scale" class="w-3 h-3 text-amber-700"></i> ~140-160 gr Doğal Yoğunluk
+      </span>
+    </div>
+
+    <p class="text-sm text-neutral-700 leading-relaxed mb-4">
+      %100 doğal insan saçı, mikro / görünmez uygulama ve ücretsiz saç analizi dahil komple paket.
+    </p>
+
+    <a 
+      href="https://wa.me/905072825248?text=Merhaba%2C%2050%20cm%20200%20adet%20(8.000%20TL)%20sa%C3%A7%20kaynak%20kampanyas%C4%B1%20i%C3%A7in%20bilgi%20ve%20randevu%20almak%20istiyorum." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      onclick="if(window.gtag){ gtag('event', 'campaign_click', {'event_category': 'lead', 'event_label': 'kampanya_50cm_8000tl', 'transport_type': 'beacon'}); } reportAdsConversion();" 
+      class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold text-xs sm:text-sm shadow transition duration-200 active:scale-[0.99]"
+    >
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>Bu Paketi WhatsApp'tan Rezerve Et</span>
+    </a>
+  </article>
+
+  <!-- Kampanya 2: 70 cm Paketi -->
+  <article class="p-5 sm:p-6 rounded-2xl bg-white border-2 border-amber-500 shadow-md relative overflow-hidden transform sm:scale-[1.01] transition-all duration-200">
+    <div class="flex items-start justify-between gap-2 mb-2">
+      <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-600 text-white shadow-sm">
+        En Çok Tercih Edilen
+      </span>
+      <div class="text-right shrink-0">
+        <div class="text-2xl font-black text-amber-900 leading-none">9.000 ₺</div>
+        <div class="text-[11px] text-amber-800 font-bold mt-1">Takım &amp; İşçilik Dahil</div>
+      </div>
+    </div>
+
+    <h2 class="text-base font-bold text-neutral-900 mb-1.5">70 cm Doğal Saç Kaynak (200 Adet)</h2>
+
+    <div class="mb-3">
+      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-900 border border-amber-200/70">
+        <i data-lucide="scale" class="w-3 h-3 text-amber-700"></i> ~180-200 gr Ekstra Dolgun
+      </span>
+    </div>
+
+    <p class="text-sm text-neutral-700 leading-relaxed mb-4">
+      %100 doğal saç garantisi ve profesyonel takma işlemi dahil komple paket.
+    </p>
+
+    <a 
+      href="https://wa.me/905072825248?text=Merhaba%2C%2070%20cm%20200%20adet%20(9.000%20TL)%20sa%C3%A7%20kaynak%20kampanyas%C4%B1%20i%C3%A7in%20bilgi%20ve%20randevu%20almak%20istiyorum." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      onclick="if(window.gtag){ gtag('event', 'campaign_click', {'event_category': 'lead', 'event_label': 'kampanya_70cm_9000tl', 'transport_type': 'beacon'}); } reportAdsConversion();" 
+      class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold text-xs sm:text-sm shadow transition duration-200 active:scale-[0.99]"
+    >
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>Bu Paketi WhatsApp'tan Rezerve Et</span>
+    </a>
+  </article>
+
+</section>
+
+<!-- Sosyal Kanıt: Google 5.0 Yıldız Kartı -->
+<section aria-label="Müşteri Değerlendirmeleri">
+  <a 
+    href="https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    onclick="if(window.gtag){ gtag('event', 'google_review_click', {'event_category': 'reputation', 'event_label': 'review_card', 'transport_type': 'beacon'}); }" 
+    class="w-full p-3.5 rounded-xl bg-white border border-neutral-200/90 shadow-sm hover:border-amber-400 transition-all duration-200 flex items-center justify-between group active:scale-[0.99]"
+  >
+    <div class="flex items-center gap-3">
+      <div class="p-2 rounded-lg bg-amber-50 text-amber-600 group-hover:bg-amber-100 transition-colors">
+        <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-500"></i>
+      </div>
+      <div>
+        <div class="flex items-center gap-1 text-amber-500">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-500"></i>
+          <span class="text-xs font-bold text-neutral-900 ml-1">5.0</span>
+          <span class="text-[11px] text-neutral-500">(165 Google Yorumu)</span>
+        </div>
+        <div class="text-[11px] text-neutral-500 mt-0.5">Google İşletme profilimizdeki gerçek müşteri yorumları</div>
+      </div>
+    </div>
+    <i data-lucide="external-link" class="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 transition-colors"></i>
+  </a>
+</section>
+
+<!-- Güven ve Kalite Vurgusu -->
+<section class="grid grid-cols-2 gap-2 text-center text-xs" aria-label="Neden Bizi Seçmelisiniz">
+  <div class="p-3.5 rounded-xl bg-white border border-neutral-200/80 shadow-sm">
+    <i data-lucide="badge-check" class="w-4 h-4 text-amber-600 mx-auto mb-1"></i>
+    <span class="font-bold text-neutral-900 block">%100 Gerçek Saç</span>
+    <span class="text-[11px] text-neutral-500">İşlem görebilir, boyanabilir</span>
+  </div>
+  <div class="p-3.5 rounded-xl bg-white border border-neutral-200/80 shadow-sm">
+    <i data-lucide="heart-handshake" class="w-4 h-4 text-amber-600 mx-auto mb-1"></i>
+    <span class="font-bold text-neutral-900 block">Dökülmeme Garantisi</span>
+    <span class="text-[11px] text-neutral-500">Konforlu &amp; hafif kullanım</span>
+  </div>
+</section>
+
+<!-- Sıkça Sorulan Sorular -->
+<section class="space-y-2 pt-1" aria-label="Sıkça Sorulan Sorular">
+  <div class="text-center mb-1">
+    <span class="text-[11px] font-bold tracking-wider uppercase text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200/70">Merak Edilenler</span>
+  </div>
+  
+  <details class="group bg-white rounded-xl border border-neutral-200/90 p-3.5 text-xs [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between cursor-pointer font-bold text-neutral-900">
+      <span>Mikro kaynak kendi saçıma zarar verir mi?</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform"></i>
+    </summary>
+    <p class="mt-2 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-2">
+      Kesinlikle hayır. Uzmanımız Hanife Tosun tarafından doğru gramaj dağılımı ile takılan kaynaklar, saç tellerinize gereksiz ağırlık bindirmez ve dökülme yapmaz.
+    </p>
+  </details>
+
+  <details class="group bg-white rounded-xl border border-neutral-200/90 p-3.5 text-xs [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between cursor-pointer font-bold text-neutral-900">
+      <span>Kullanılan saçlar %100 doğal insan saçı mı?</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform"></i>
+    </summary>
+    <p class="mt-2 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-2">
+      Evet. Saçlarımız %100 doğal gerçek insan saçıdır. İstediğiniz renge boyatabilir, açma işlemi uygulayabilir, maşa ve fönle serbestçe şekillendirebilirsiniz.
+    </p>
+  </details>
+
+  <details class="group bg-white rounded-xl border border-neutral-200/90 p-3.5 text-xs [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between cursor-pointer font-bold text-neutral-900">
+      <span>Kaynakların kullanım ve bakım süresi nedir?</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform"></i>
+    </summary>
+    <p class="mt-2 text-neutral-600 leading-relaxed border-t border-neutral-100 pt-2">
+      Saçınızın uzama hızına göre 3-4 ay konforla kullanılır. Süre sonunda saçlar özel solüsyonla yıpratılmadan çıkarılır ve tekrar yukarı takılarak uzun yıllar kullanılır.
+    </p>
+  </details>
+</section>
+
+<!-- Ana Dönüşüm Butonları -->
+<section class="space-y-3 pt-2" aria-label="İletişim ve Dönüşüm Kanalları">
+
+  <!-- 1. WhatsApp Butonu -->
+  <a 
+    href="https://wa.me/905072825248?text=Merhaba%2C%20sa%C3%A7%20kaynak%20fiyatlar%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    onclick="if(window.gtag){ gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'hero_whatsapp', 'transport_type': 'beacon'}); } reportAdsConversion();" 
+    class="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/20 transition-all duration-200 active:scale-[0.99]"
+  >
+    <i data-lucide="message-circle" class="w-5 h-5"></i>
+    <span>WhatsApp ile Hızlı Randevu Al</span>
+  </a>
+
+  <!-- 2. Hemen Ara Butonu -->
+  <a 
+    href="tel:+905072825248" 
+    onclick="if(window.gtag){ gtag('event', 'phone_call_click', {'event_category': 'lead', 'event_label': 'call_btn', 'transport_type': 'beacon'}); } reportAdsConversion();" 
+    class="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-sm shadow-md transition-all duration-200 active:scale-[0.99]"
+  >
+    <i data-lucide="phone-call" class="w-5 h-5 text-amber-400"></i>
+    <span>Hemen Ara: 0507 282 52 48</span>
+  </a>
+
+  <!-- 3. Instagram Butonu -->
+  <a 
+    href="https://www.instagram.com/daisys.sackaynakmerkezi/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    onclick="if(window.gtag){ gtag('event', 'instagram_click', {'event_category': 'social', 'event_label': 'main_instagram', 'transport_type': 'beacon'}); }" 
+    class="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-semibold text-sm shadow-md shadow-pink-500/15 transition-all duration-200 active:scale-[0.99]"
+  >
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+    <span>Instagram Sayfamızı İnceleyin</span>
+  </a>
+
+  <!-- 4. Haritalar Yol Tarifi Butonu -->
+  <a 
+    href="https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    onclick="if(window.gtag){ gtag('event', 'directions_click', {'event_category': 'navigation', 'event_label': 'maps_pin', 'transport_type': 'beacon'}); }" 
+    class="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-white border border-neutral-200/80 hover:bg-neutral-50 text-neutral-700 text-xs font-medium transition-colors active:scale-[0.99]"
+  >
+    <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
+    <span>Google Haritalar ile Yol Tarifi Al</span>
+  </a>
+
+</section>
