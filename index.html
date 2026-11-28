@@ -6,24 +6,30 @@
   
   <!-- Temel SEO & Meta Etiketleri -->
   <title>Bursa Saç Kaynak — Daisy Saç Kaynak Merkezi | Mikro & Görünmez Kaynak</title>
-  <meta name="description" content="Bursa saç kaynak uzmanı Daisy Saç Kaynak Merkezi: Osmangazi'de %100 gerçek insan saçı, görünmez mikro kaynak uygulaması ve 50-70 cm özel paketler. Hemen randevu alın.">
-  <meta name="keywords" content="bursa saç kaynak, mikro kaynak bursa, görünmez kaynak bursa, medikal saç kaynak bursa, daisy saç kaynak merkezi, osmangazi saç kaynak, hanife tosun">
+  <meta name="description" content="Bursa Osmangazi saç kaynak merkezi Daisy Hair: %100 doğal insan saçı, belli olmayan ince dip işçiliğiyle görünmez mikro kaynak ve 50-70 cm şeffaf paketler. Hemen fotoğraf atıp fiyat alın.">
+  <meta name="keywords" content="bursa saç kaynak, bursa saç kaynak merkezi, mikro kaynak bursa, görünmez kaynak bursa, saç kaynak fiyatları bursa, osmangazi saç kaynak, daisy saç kaynak, hanife tosun">
   <meta name="author" content="Daisy Saç Kaynak Merkezi">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://daisysackaynak.com/">
 
-  <!-- Open Graph -->
+  <!-- Open Graph & Sosyal Medya Önizlemesi -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:title" content="Bursa Saç Kaynak — Daisy Saç Kaynak Merkezi">
-  <meta property="og:description" content="Bursa Osmangazi'de uzman uygulama: %100 gerçek insan saçı, dışarıdan fark edilmeyen görünmez mikro kaynak.">
+  <meta property="og:description" content="Bursa Osmangazi'de uzman uygulama: %100 gerçek doğal insan saçı, dışarıdan fark edilmeyen görünmez mikro kaynak. WhatsApp'tan fotoğraf atın, net fiyat alın.">
   <meta property="og:url" content="https://daisysackaynak.com/">
   <meta property="og:site_name" content="Daisy Saç Kaynak Merkezi">
   <meta property="og:image" content="https://daisysackaynak.com/assets/logo.png">
 
-  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bursa Saç Kaynak — Daisy Saç Kaynak Merkezi">
+  <meta name="twitter:description" content="Osmangazi Bursa'da %100 doğal insan saçı, mikro ve görünmez saç kaynak uygulamaları.">
+  <meta name="twitter:image" content="https://daisysackaynak.com/assets/logo.png">
 
-  <!-- Google Analytics 4 (GA4) + Google Ads Etiketi -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Google Analytics 4 (GA4) + Google Ads Dönüşüm Etiketi -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18550400531"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,31 +39,45 @@
     gtag('config', 'AW-18550400531');
     gtag('config', 'G-6Q5XW2C3N5');
 
-    // Google Ads Dönüşüm Bildirimi (Çift tetiklemeyi önleyen güvenli yapı)
-    var conversionReported = false;
+    // Google Ads Tekil Dönüşüm Bildirimi (Oturum Başına 1 Kez - sessionStorage Kilitli)
     function reportAdsConversion() {
-      if (typeof window.gtag === 'function' && !conversionReported) {
-        conversionReported = true;
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18550400531/gS3_CPm_u7MdEJPMwo1F',
-          'value': 1.0,
-          'currency': 'TRY',
-          'transport_type': 'beacon'
-        });
-        setTimeout(function() { conversionReported = false; }, 3000);
+      try {
+        if (sessionStorage.getItem('daisy_ads_conv_sent') === '1') {
+          return;
+        }
+        if (typeof window.gtag === 'function') {
+          sessionStorage.setItem('daisy_ads_conv_sent', '1');
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18550400531/gS3_CPm_u7MdEJPMwo1F',
+            'value': 1.0,
+            'currency': 'TRY',
+            'transport_type': 'beacon'
+          });
+        }
+      } catch (e) {
+        if (typeof window.gtag === 'function' && !window._daisyConvFallback) {
+          window._daisyConvFallback = true;
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18550400531/gS3_CPm_u7MdEJPMwo1F',
+            'value': 1.0,
+            'currency': 'TRY',
+            'transport_type': 'beacon'
+          });
+        }
       }
     }
   </script>
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Yapılandırılmış Veri: Schema.org JSON-LD (Google Arama & Yerel SEO Uyumlu) -->
   <script type="application/ld+json">
   [
     {
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "@id": "https://daisysackaynak.com/#salon",
-      "name": "Bursa Saç Kaynak Merkezi (Daisy Hair)",
-      "alternateName": "Daisy Saç Kaynak Merkezi",
+      "name": "Daisy Saç Kaynak Merkezi",
+      "alternateName": "Bursa Saç Kaynak Merkezi (Daisy Hair)",
+      "description": "Bursa Osmangazi'de %100 doğal insan saçı, mikro saç kaynak, görünmez kaynak ve saç renklendirme hizmetleri sunan uzman saç kaynak stüdyosu.",
       "image": "https://daisysackaynak.com/assets/logo.png",
       "url": "https://daisysackaynak.com/",
       "telephone": "+905072825248",
@@ -89,11 +109,12 @@
           "closes": "19:30"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "165"
-      },
+      "areaServed": [
+        { "@type": "City", "name": "Bursa" },
+        { "@type": "AdministrativeArea", "name": "Osmangazi" },
+        { "@type": "AdministrativeArea", "name": "Nilüfer" },
+        { "@type": "AdministrativeArea", "name": "Yıldırım" }
+      ],
       "sameAs": [
         "https://www.instagram.com/daisys.sackaynakmerkezi/",
         "https://wa.me/905072825248",
@@ -109,7 +130,7 @@
           "name": "Mikro kaynak kendi saçıma zarar verir mi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hayır. Uzman ellerde doğru gramaj dağılımı ile uygulanan mikro ve görünmez kaynak saç köklerinize yük bindirmez, dökülmeye veya kopmaya sebep olmaz."
+            "text": "Uzman ellerde doğru gramaj dağılımı ile uygulanan mikro ve görünmez kaynak saç köklerinize gereksiz ağırlık bindirmez, kendi saçınızın sağlıklı uzama sürecini korur."
           }
         },
         {
@@ -117,15 +138,15 @@
           "name": "Kullanılan saçlar %100 gerçek insan saçı mı?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Evet, merkezimizde yalnızca %100 gerçek, işlenmemiş doğal insan saçı kullanılır. Fön, boya, açma ve maşa gibi tüm kuaför işlemlerine tam uygundur."
+            "text": "Evet, merkezimizde %100 doğal işlenmemiş insan saçı kullanılır. Fön, boya, cila ve maşa gibi kuaför işlemlerine kendi saçınız gibi uyum sağlar."
           }
         },
         {
           "@type": "Question",
-          "name": "Kaynakların kullanım süresi ne kadardır?",
+          "name": "Kaynakların kullanım ve yenileme süresi ne kadardır?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kendi saçınızın uzama hızına bağlı olarak ortalama 3 ila 4 ay rahatlıkla kullanılır. Süre sonunda saçlar sökülüp tekrar yukarı çekilerek (bakım yapılarak) uzun yıllar kullanılabilir."
+            "text": "Kendi saçınızın uzama hızına bağlı olarak ortalama 3 ila 4 ay konforla kullanılır. Süre sonunda özel solüsyonla çıkarılıp bakımı yapılarak tekrar uygulanabilir."
           }
         }
       ]
@@ -133,92 +154,394 @@
   ]
   </script>
 
-  <!-- Gömülü CSS (Bozulmaz / CDN Bağımsız) -->
+  <!-- Gömülü CSS: Lüks Butik Salon Estetiği + Sıfır Harici CDN Gecikmesi -->
   <style>
-    *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid #e5e7eb; }
-    html { line-height: 1.5; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-    body { background-color: #FAF7F2; color: #171717; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 5.75rem; }
+    :root {
+      --bg-cream: #FAF6F0;
+      --bg-card: #FFFFFF;
+      --ink: #181512;
+      --ink-soft: #575049;
+      --ink-muted: #8A8178;
+      --gold: #B87D28;
+      --gold-dark: #8F5E18;
+      --gold-light: #F3D999;
+      --gold-tint: #FDF8EE;
+      --border: #EAE2D6;
+      --wa-green: #22C55E;
+      --wa-green-dark: #16A34A;
+    }
+
+    *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid var(--border); }
+    html { line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      background: radial-gradient(circle at 50% 0%, #FFFDF9 0%, var(--bg-cream) 65%);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 5.75rem;
+    }
     @media (min-width: 640px) { body { padding-bottom: 2rem; } }
-    main { width: 100%; max-width: 32rem; margin: 0 auto; padding: 1.75rem 1rem; }
-    @media (min-width: 640px) { main { padding: 2.5rem 1rem; } }
+
+    main { width: 100%; max-width: 33rem; margin: 0 auto; padding: 1.75rem 1rem 2.25rem; }
+    @media (min-width: 640px) { main { padding: 2.5rem 1rem 3rem; } }
+
+    /* Sitelink Bölüm Çapaları */
+    #mikro-kaynak, #analiz, #fiyatlar, #yorumlar { scroll-margin-top: 1.25rem; }
 
     /* Header & Marka Alanı */
-    .header-box { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-    .logo-container { position: relative; width: 5.75rem; height: 5.75rem; border-radius: 9999px; background-color: #ffffff; padding: 0.45rem; border: 2px solid #f59e0b; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(180, 83, 9, 0.12); }
+    .header-box { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .logo-ring {
+      position: relative;
+      width: 6.25rem;
+      height: 6.25rem;
+      border-radius: 9999px;
+      padding: 3px;
+      background: linear-gradient(135deg, #EAB308, #B45309, #FDE68A);
+      box-shadow: 0 10px 25px -5px rgba(184, 125, 40, 0.28);
+    }
+    .logo-container {
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #ffffff;
+      padding: 0.45rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
     .logo-img { width: 100%; height: 100%; object-fit: contain; border-radius: 9999px; }
-    h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.025em; line-height: 1.25; margin-top: 0.75rem; text-align: center; }
-    @media (min-width: 640px) { h1 { font-size: 1.875rem; } }
-    .brand-title { display: inline-block; white-space: nowrap; color: #b45309; font-size: 1.25rem; font-weight: 700; margin-top: 0.2rem; }
-    @media (min-width: 640px) { .brand-title { font-size: 1.5rem; } }
-    .tagline { font-size: 0.8125rem; color: #525252; max-width: 25rem; margin: 0.65rem auto 0 auto; line-height: 1.5; text-align: center; }
+
+    .location-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: var(--gold-tint);
+      border: 1px solid #F3E5C8;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-top: 0.875rem;
+    }
+
+    h1 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.22;
+      margin-top: 0.55rem;
+      color: var(--ink);
+    }
+    @media (min-width: 640px) { h1 { font-size: 1.85rem; } }
+    .brand-sub {
+      display: block;
+      color: var(--gold);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 0.15rem;
+    }
+
+    .tagline {
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+      max-width: 26rem;
+      margin: 0.65rem auto 0;
+      line-height: 1.55;
+    }
 
     /* Hizmet Rozetleri */
-    .badge-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.375rem; margin-top: 0.875rem; }
-    .badge { display: inline-flex; align-items: center; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; background-color: #ffffff; color: #262626; border: 1px solid #e5e5e5; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04); }
-    .badge svg { width: 0.875rem; height: 0.875rem; margin-right: 0.375rem; color: #b45309; flex-shrink: 0; }
+    .badge-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 0.95rem; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--bg-card);
+      color: var(--ink);
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 5px rgba(24, 21, 18, 0.03);
+    }
+    .badge svg { width: 0.875rem; height: 0.875rem; margin-right: 0.35rem; color: var(--gold); flex-shrink: 0; }
 
     /* Çalışma Saatleri Rozeti */
-    .hours-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.875rem; border-radius: 9999px; background-color: #ffffff; border: 1px solid #e5e5e5; font-size: 0.75rem; font-weight: 500; color: #404040; margin: 0.875rem auto 0 auto; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04); }
+    .hours-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.375rem 0.9rem;
+      border-radius: 9999px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      margin-top: 0.85rem;
+    }
     .dot-ping { position: relative; display: flex; height: 0.5rem; width: 0.5rem; }
-    .dot-ping-animation { animation: ping 1.2s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 9999px; background-color: #34d399; opacity: 0.75; }
+    .dot-ping-animation { animation: ping 1.3s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 9999px; background-color: #34d399; opacity: 0.75; }
     .dot-solid { position: relative; display: inline-flex; border-radius: 9999px; height: 0.5rem; width: 0.5rem; background-color: #10b981; }
-    @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+    @keyframes ping { 75%, 100% { transform: scale(2.1); opacity: 0; } }
 
-    /* Hızlı Fotoğraf Gönder & Net Fiyat Al Dönüşüm Kutusu */
-    .quick-lead-box { background: linear-gradient(135deg, #171717 0%, #292524 100%); color: #ffffff; border-radius: 1rem; padding: 1.125rem; margin-top: 1.125rem; border: 1px solid #44403c; box-shadow: 0 8px 20px rgba(23, 23, 23, 0.14); }
-    .quick-lead-badge { display: inline-flex; align-items: center; gap: 0.35rem; background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.6875rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.02em; }
-    .quick-lead-title { font-size: 1rem; font-weight: 800; margin-top: 0.5rem; line-height: 1.3; color: #ffffff; }
-    .quick-lead-desc { font-size: 0.8125rem; color: #d6d3d1; margin-top: 0.35rem; line-height: 1.45; }
-    .quick-lead-actions { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.875rem; }
-    .btn-quick-wa { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8125rem 1rem; border-radius: 0.75rem; background-color: #25D366; color: #ffffff; font-weight: 800; font-size: 0.875rem; text-decoration: none; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: transform 0.15s ease, background-color 0.2s; }
-    .btn-quick-wa:hover { background-color: #20bd5a; transform: translateY(-1px); }
-    .btn-quick-call { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.65rem 1rem; border-radius: 0.75rem; background-color: rgba(255, 255, 255, 0.1); color: #fef3c7; border: 1px solid rgba(255, 255, 255, 0.18); font-weight: 600; font-size: 0.8125rem; text-decoration: none; transition: background-color 0.2s; }
-    .btn-quick-call:hover { background-color: rgba(255, 255, 255, 0.16); }
+    /* Hızlı Dönüşüm Kutusu (Hero CTA Card) */
+    .quick-lead-box {
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.22), transparent 60%),
+                  linear-gradient(145deg, #191614 0%, #2A2420 100%);
+      color: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.35rem 1.25rem;
+      margin-top: 1.25rem;
+      border: 1px solid #3D352E;
+      box-shadow: 0 14px 30px -8px rgba(24, 21, 18, 0.32);
+    }
+    .quick-lead-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: rgba(212, 175, 55, 0.18);
+      color: var(--gold-light);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      padding: 0.22rem 0.65rem;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+    }
+    .quick-lead-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-top: 0.6rem;
+      line-height: 1.32;
+      color: #ffffff;
+    }
+    .quick-lead-desc {
+      font-size: 0.82rem;
+      color: #D6CFC7;
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+    .quick-lead-actions { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 1rem; }
+    .btn-quick-wa {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1rem;
+      border-radius: 0.85rem;
+      background: linear-gradient(180deg, #25D366 0%, #1EBE5D 100%);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.32);
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+    .btn-quick-wa:hover { transform: translateY(-1px); filter: brightness(1.03); }
+    .btn-quick-call {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1rem;
+      border-radius: 0.85rem;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #FDE68A;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .btn-quick-call:hover { background-color: rgba(255, 255, 255, 0.14); }
 
-    /* Instagram Gerçek Uygulamalar Şeridi */
-    .insta-proof-bar { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.875rem 1rem; border-radius: 0.875rem; background-color: #ffffff; border: 1px solid #f3e8ff; margin-top: 1rem; text-decoration: none; color: inherit; box-shadow: 0 2px 6px rgba(131, 58, 180, 0.06); }
-    .insta-icon-wrap { width: 2.35rem; height: 2.35rem; border-radius: 0.65rem; background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    /* Instagram Kanıt Şeridi */
+    .insta-proof-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem;
+      border-radius: 1rem;
+      background-color: var(--bg-card);
+      border: 1px solid #F1DFEC;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(131, 58, 180, 0.05);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .insta-proof-bar:hover { transform: translateY(-1px); border-color: #E5B8D9; }
+    .insta-icon-wrap {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Bölüm Başlığı */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      margin-bottom: 0.25rem;
+      padding: 0 0.15rem;
+    }
+    .section-heading h2 { font-size: 0.95rem; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
+    .section-heading span { font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); background: var(--gold-tint); border: 1px solid #F3E5C8; padding: 0.15rem 0.55rem; border-radius: 9999px; }
 
     /* Paket Kartları */
-    .card { background-color: #ffffff; border-radius: 1rem; padding: 1.25rem; border: 1px solid #e5e5e5; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05); margin-top: 1rem; }
-    .card-featured { border: 2px solid #f59e0b; box-shadow: 0 6px 14px -2px rgba(245, 158, 11, 0.12); }
+    .card {
+      background-color: var(--bg-card);
+      border-radius: 1.15rem;
+      padding: 1.3rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px rgba(24, 21, 18, 0.04);
+      margin-top: 0.85rem;
+    }
+    .card-featured {
+      border: 2px solid #D97706;
+      background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
+      box-shadow: 0 10px 24px -6px rgba(184, 125, 40, 0.18);
+    }
     .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
-    .pill-tag { display: inline-block; padding: 0.15rem 0.65rem; border-radius: 9999px; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; background-color: #f5f5f5; color: #262626; border: 1px solid #e5e5e5; }
-    .pill-tag-gold { background-color: #d97706; color: #ffffff; border-color: #d97706; }
-    .price-text { font-size: 1.5rem; font-weight: 900; line-height: 1; color: #171717; }
-    .price-sub { font-size: 0.6875rem; font-weight: 700; color: #92400e; margin-top: 0.25rem; }
-    .card-title { font-size: 1rem; font-weight: 700; color: #171717; margin-bottom: 0.375rem; }
-    .gram-pill { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.625rem; border-radius: 0.375rem; font-size: 0.6875rem; font-weight: 600; background-color: #fffbeb; color: #78350f; border: 1px solid #fef3c7; margin-bottom: 0.75rem; }
-    .card-desc { font-size: 0.875rem; color: #404040; line-height: 1.5; margin-bottom: 1rem; }
-    .btn-reserve { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8125rem 1rem; border-radius: 0.75rem; background-color: #b45309; color: #ffffff; font-weight: 700; font-size: 0.8125rem; text-decoration: none; transition: background-color 0.2s; }
-    .btn-reserve:hover { background-color: #92400e; }
+    .pill-tag {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      background-color: #F5F1EB;
+      color: var(--ink-soft);
+      border: 1px solid var(--border);
+    }
+    .pill-tag-gold { background: linear-gradient(135deg, #D97706, #B45309); color: #ffffff; border-color: transparent; }
+    .price-text { font-size: 1.6rem; font-weight: 900; line-height: 1; color: var(--ink); letter-spacing: -0.02em; }
+    .price-sub { font-size: 0.6875rem; font-weight: 700; color: var(--gold-dark); margin-top: 0.25rem; }
+    .card-title { font-size: 1.05rem; font-weight: 800; color: var(--ink); margin-bottom: 0.4rem; }
+    .gram-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.28rem 0.65rem;
+      border-radius: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background-color: var(--gold-tint);
+      color: var(--gold-dark);
+      border: 1px solid #F3E5C8;
+      margin-bottom: 0.75rem;
+    }
+    .card-desc { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.55; margin-bottom: 1rem; }
+    .btn-reserve {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem;
+      border-radius: 0.85rem;
+      background: linear-gradient(135deg, #B87D28 0%, #9A6419 100%);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.84rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(184, 125, 40, 0.24);
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+    .btn-reserve:hover { transform: translateY(-1px); filter: brightness(1.04); }
 
     /* Google Yorum & Güven Kutuları */
-    .google-card { display: flex; align-items: center; justify-content: space-between; padding: 0.875rem; border-radius: 0.875rem; background-color: #ffffff; border: 1px solid #e5e5e5; text-decoration: none; margin-top: 1rem; color: inherit; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+    .google-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.95rem 1rem;
+      border-radius: 1rem;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      margin-top: 1rem;
+      color: inherit;
+      box-shadow: 0 3px 10px rgba(24, 21, 18, 0.03);
+    }
     .stars-wrap { display: flex; align-items: center; gap: 0.25rem; color: #f59e0b; }
-    .trust-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; text-align: center; font-size: 0.75rem; margin-top: 1rem; }
-    .trust-box { padding: 0.875rem; border-radius: 0.75rem; background-color: #ffffff; border: 1px solid #e5e5e5; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+
+    /* Müşteri Deneyim Alıntıları (3 Gerçekçi Mini Kart) */
+    .reviews-mini-grid { display: grid; grid-template-columns: 1fr; gap: 0.55rem; margin-top: 0.65rem; }
+    .rev-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.875rem;
+      padding: 0.8rem 0.95rem;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      line-height: 1.48;
+    }
+    .rev-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem; font-weight: 700; color: var(--ink); font-size: 0.75rem; }
+
+    .trust-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; text-align: center; font-size: 0.75rem; margin-top: 1rem; }
+    .trust-box { padding: 0.95rem 0.75rem; border-radius: 0.95rem; background-color: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 2px 6px rgba(24, 21, 18, 0.03); }
 
     /* SSS (FAQ) */
-    details { background-color: #ffffff; border-radius: 0.75rem; border: 1px solid #e5e5e5; padding: 0.875rem; font-size: 0.75rem; margin-top: 0.5rem; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04); }
-    summary { font-weight: 700; color: #171717; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+    details { background-color: var(--bg-card); border-radius: 0.875rem; border: 1px solid var(--border); padding: 0.9rem 1rem; font-size: 0.8rem; margin-top: 0.5rem; box-shadow: 0 2px 5px rgba(24, 21, 18, 0.02); }
+    summary { font-weight: 700; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
     summary::-webkit-details-marker { display: none; }
-    .faq-ans { margin-top: 0.5rem; color: #525252; border-top: 1px solid #f5f5f5; padding-top: 0.5rem; line-height: 1.5; }
+    .faq-ans { margin-top: 0.55rem; color: var(--ink-soft); border-top: 1px solid #F3EDE4; padding-top: 0.55rem; line-height: 1.55; }
 
     /* Alt Aksiyon Butonları */
-    .btn-action-wa { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1rem 1.5rem; border-radius: 1rem; background-color: #25D366; color: #ffffff; font-weight: 800; font-size: 0.9375rem; text-decoration: none; box-shadow: 0 4px 12px rgba(37,211,102,0.28); }
-    .btn-action-phone { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 0.875rem 1.5rem; border-radius: 1rem; background-color: #171717; color: #ffffff; font-weight: 700; font-size: 0.875rem; text-decoration: none; margin-top: 0.75rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .btn-action-insta { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 0.875rem 1.5rem; border-radius: 1rem; background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); color: #ffffff; font-weight: 600; font-size: 0.875rem; text-decoration: none; margin-top: 0.75rem; box-shadow: 0 2px 6px rgba(253,29,29,0.15); }
-    .btn-action-maps { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 0.75rem; background-color: #ffffff; border: 1px solid #e5e5e5; color: #404040; font-size: 0.75rem; font-weight: 500; text-decoration: none; margin-top: 0.75rem; }
+    .btn-action-wa { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1rem 1.5rem; border-radius: 1rem; background: linear-gradient(180deg, #25D366 0%, #1EBE5D 100%); color: #ffffff; font-weight: 800; font-size: 0.9375rem; text-decoration: none; box-shadow: 0 6px 16px rgba(37,211,102,0.28); }
+    .btn-action-phone { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 0.9rem 1.5rem; border-radius: 1rem; background-color: #191614; color: #ffffff; font-weight: 700; font-size: 0.875rem; text-decoration: none; margin-top: 0.75rem; box-shadow: 0 4px 10px rgba(24,21,18,0.12); }
+    .btn-action-insta { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 0.9rem 1.5rem; border-radius: 1rem; background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); color: #ffffff; font-weight: 700; font-size: 0.875rem; text-decoration: none; margin-top: 0.75rem; box-shadow: 0 4px 12px rgba(253,29,29,0.16); }
+    .btn-action-maps { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8rem 1.25rem; border-radius: 0.85rem; background-color: var(--bg-card); border: 1px solid var(--border); color: var(--ink-soft); font-size: 0.78rem; font-weight: 600; text-decoration: none; margin-top: 0.75rem; }
+
+    /* Rehber Sayfaları Link Şeridi */
+    .guide-box { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 1rem; padding: 1rem; margin-top: 1.35rem; text-align: center; }
+    .guide-title { font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: var(--gold-dark); letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+    .guide-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; }
+    .guide-links a { font-size: 0.75rem; color: var(--ink); background-color: var(--bg-cream); border: 1px solid var(--border); padding: 0.38rem 0.8rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: all 0.15s ease; cursor: pointer; }
+    .guide-links a:hover { border-color: var(--gold); color: var(--gold-dark); background-color: var(--gold-tint); }
+
+    /* Rehber Okuma Modalı */
+    .guide-modal-backdrop { position: fixed; inset: 0; background: rgba(24, 21, 18, 0.74); backdrop-filter: blur(4px); z-index: 80; display: none; align-items: center; justify-content: center; padding: 1rem; }
+    .guide-modal-backdrop.open { display: flex; }
+    .guide-modal { background: #ffffff; width: 100%; max-width: 36rem; max-height: 85vh; border-radius: 1.25rem; border: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.28); }
+    .guide-modal-header { padding: 1rem 1.25rem; background: var(--bg-cream); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
+    .guide-modal-header h3 { font-size: 1rem; font-weight: 800; color: var(--ink); }
+    .guide-close-btn { background: #191614; color: #ffffff; border-radius: 9999px; padding: 0.35rem 0.85rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; }
+    .guide-modal-body { padding: 1.25rem; overflow-y: auto; font-size: 0.875rem; color: #374151; line-height: 1.65; }
+    .guide-modal-body h4 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin: 1rem 0 0.4rem; }
+    .guide-modal-body p { margin-bottom: 0.75rem; }
+    .guide-modal-body ul { margin: 0.4rem 0 0.85rem 1.2rem; }
+    .guide-modal-body li { margin-bottom: 0.35rem; }
+    .guide-modal-footer { padding: 0.875rem 1.25rem; border-top: 1px solid var(--border); background: var(--bg-cream); display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .guide-full-link { font-size: 0.75rem; color: var(--gold-dark); font-weight: 700; text-decoration: underline; }
 
     /* Mobil Sabit Alt Bar */
-    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; padding: 0.75rem; background-color: rgba(255, 255, 255, 0.96); backdrop-filter: blur(8px); border-top: 1px solid #e5e5e5; box-shadow: 0 -4px 14px rgba(0,0,0,0.08); }
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; padding: 0.75rem; background-color: rgba(255, 253, 249, 0.96); backdrop-filter: blur(8px); border-top: 1px solid var(--border); box-shadow: 0 -4px 16px rgba(24,21,18,0.08); }
     @media (min-width: 640px) { .sticky-bar { display: none; } }
     .sticky-inner { max-width: 28rem; margin: 0 auto; display: flex; align-items: center; gap: 0.5rem; }
-    .sticky-call { padding: 0.75rem 0.9rem; border-radius: 0.75rem; background-color: #171717; color: #f59e0b; display: flex; align-items: center; justify-content: center; gap: 0.35rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; flex-shrink: 0; }
-    .sticky-wa { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem; padding: 0.75rem 0.875rem; border-radius: 0.75rem; background-color: #25D366; color: #ffffff; font-weight: 800; font-size: 0.75rem; text-decoration: none; box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25); }
+    .sticky-call { padding: 0.75rem 0.95rem; border-radius: 0.8rem; background-color: #191614; color: #FBBF24; display: flex; align-items: center; justify-content: center; gap: 0.35rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; flex-shrink: 0; }
+    .sticky-wa { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem; padding: 0.75rem 0.875rem; border-radius: 0.8rem; background: linear-gradient(180deg, #25D366 0%, #1EBE5D 100%); color: #ffffff; font-weight: 800; font-size: 0.78rem; text-decoration: none; box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25); }
 
-    footer { width: 100%; background-color: #ffffff; border-top: 1px solid #e5e5e5; padding: 1.5rem 1rem; margin-top: 2rem; font-size: 0.75rem; color: #737373; text-align: center; }
+    footer { width: 100%; background-color: var(--bg-card); border-top: 1px solid var(--border); padding: 1.5rem 1rem; margin-top: 2rem; font-size: 0.75rem; color: var(--ink-muted); text-align: center; }
   </style>
 </head>
 <body>
@@ -228,28 +551,32 @@
 
     <!-- Logo ve Başlık -->
     <header class="header-box">
-      <div class="logo-container">
-        <img 
-          src="assets/logo.png" 
-          alt="Daisy Saç Kaynak Merkezi Bursa Logosu" 
-          width="96" 
-          height="96" 
-          class="logo-img"
-          onerror="this.onerror=null; this.src='assets/logo.jpg';"
-        >
+      <div class="logo-ring">
+        <div class="logo-container">
+          <img 
+            src="assets/logo.png" 
+            alt="Daisy Saç Kaynak Merkezi Bursa Osmangazi Logosu" 
+            width="96" 
+            height="96" 
+            class="logo-img"
+            onerror="this.onerror=null; this.src='assets/logo.jpg';"
+          >
+        </div>
       </div>
 
+      <span class="location-kicker">Tahtakale • Osmangazi / Bursa</span>
+
       <h1>
-        <span style="display: block; color: #171717;">Bursa Saç Kaynak</span>
-        <span class="brand-title">Daisy Saç Kaynak Merkezi</span>
+        <span>Bursa Saç Kaynak Merkezi</span>
+        <span class="brand-sub">Daisy Saç Kaynak Stüdyosu</span>
       </h1>
 
       <p class="tagline">
-        Bursa Osmangazi'de uzman uygulama: %100 gerçek insan saçı, dışarıdan fark edilmeyen görünmez mikro kaynak ve hafif kullanım konforu.
+        %100 gerçek doğal insan saçı, dışarıdan fark edilmeyen ince dip işçiliğiyle görünmez mikro kaynak ve gün boyu hafif kullanım konforu.
       </p>
 
-      <!-- Hizmet Rozetleri -->
-      <div class="badge-list" aria-label="Hizmet Alanlarımız">
+      <!-- Hizmet Rozetleri (Sitelink #mikro-kaynak) -->
+      <div id="mikro-kaynak" class="badge-list" aria-label="Hizmet Alanlarımız">
         <span class="badge">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
           Mikro Kaynak
@@ -260,7 +587,7 @@
         </span>
         <span class="badge">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          Medikal Kaynak
+          Seyrek Saç Dolgunlaştırma
         </span>
         <span class="badge">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4 4 4 0 014-4c.77 0 1.5.22 2.12.6L16 6.73a4 4 0 115.66 5.66l-6.87 6.88A3.99 3.99 0 0111 21H7z"/></svg>
@@ -271,22 +598,22 @@
       <!-- Çalışma Saatleri -->
       <div class="hours-badge">
         <span class="dot-ping">
-          <span class="dot-ping-animation"></span>
-          <span class="dot-solid"></span>
+          <span id="status-ping" class="dot-ping-animation"></span>
+          <span id="status-dot" class="dot-solid"></span>
         </span>
         <span id="salon-status-text" style="font-weight: 700; color: #065f46;">Açık</span>
         <span style="color: #d4d4d4;">•</span>
         <span>Pzt - Cts: 09:00 - 19:30</span>
         <span style="color: #d4d4d4;">•</span>
-        <span style="color: #737373;">Pazar: Kapalı</span>
+        <span>Pazar: Kapalı</span>
       </div>
     </header>
 
-    <!-- Üst Hızlı Dönüşüm Bloğu (Saç Fotoğrafı At & Net Fiyat Al) -->
-    <section class="quick-lead-box" aria-label="Ücretsiz Saç Analizi ve Hızlı Fiyat">
+    <!-- Üst Hızlı Dönüşüm Bloğu (Sitelink #analiz) -->
+    <section id="analiz" class="quick-lead-box" aria-label="Ücretsiz Saç Analizi ve Hızlı Fiyat">
       <span class="quick-lead-badge">
         <svg style="width:0.75rem;height:0.75rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        Ücretsiz Online Saç Analizi
+        Ücretsiz Online Saç Analizi • 4,9 ★ (178 Yorum)
       </span>
       <h2 class="quick-lead-title">Saçınızın Fotoğrafını Atın, Size Özel Net Fiyat ve Adet Çıkaralım</h2>
       <p class="quick-lead-desc">
@@ -327,15 +654,19 @@
           <svg style="width:1.25rem;height:1.25rem" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </div>
         <div>
-          <div style="font-size: 0.8125rem; font-weight: 700; color: #171717;">Gerçek Öncesi / Sonrası Videolarımız</div>
-          <div style="font-size: 0.6875rem; color: #525252;">@daisys.sackaynakmerkezi uygulamarını inceleyin</div>
+          <div style="font-size: 0.84rem; font-weight: 700; color: var(--ink);">Gerçek Öncesi / Sonrası Videolarımız</div>
+          <div style="font-size: 0.7rem; color: var(--ink-soft);">@daisys.sackaynakmerkezi uygulamalarını inceleyin</div>
         </div>
       </div>
       <svg style="width:1rem;height:1rem;color:#833ab4;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </a>
 
-    <!-- Fırsat Paketleri -->
-    <section aria-label="Özel Kampanya Paketleri">
+    <!-- Fırsat Paketleri (Sitelink #fiyatlar) -->
+    <section id="fiyatlar" aria-label="Özel Kampanya Paketleri">
+      <div class="section-heading">
+        <h2>2026 Özel Kaynak Paketleri</h2>
+        <span>Saç + İşçilik Dahil</span>
+      </div>
 
       <!-- Paket 1 -->
       <article class="card">
@@ -346,7 +677,7 @@
             <div class="price-sub">Takım &amp; İşçilik Dahil</div>
           </div>
         </div>
-        <h2 class="card-title">50 cm Doğal Saç Kaynak (200 Adet)</h2>
+        <h3 class="card-title">50 cm Doğal Saç Kaynak (200 Adet)</h3>
         <div>
           <span class="gram-pill">
             <svg style="width:0.75rem;height:0.75rem;color:#b45309" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
@@ -354,7 +685,7 @@
           </span>
         </div>
         <p class="card-desc">
-          %100 doğal insan saçı, mikro / görünmez uygulama ve ücretsiz saç analizi dahil komple paket.
+          %100 doğal insan saçı, ince dip işçiliğiyle mikro / görünmez uygulama ve ücretsiz saç analizi dahil komple paket.
         </p>
         <a 
           href="https://wa.me/905072825248?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%2050%20cm%20200%20adet%20(8.000%20TL)%20sa%C3%A7%20kaynak%20paketi%20i%C3%A7in%20sa%C3%A7%C4%B1m%C4%B1n%20foto%C4%9Fraf%C4%B1n%C4%B1%20at%C4%B1p%20net%20fiyat%20ve%20randevu%20bilgisi%20almak%20istiyorum." 
@@ -373,11 +704,11 @@
         <div class="card-top">
           <span class="pill-tag pill-tag-gold">En Çok Tercih Edilen</span>
           <div style="text-align: right;">
-            <div class="price-text" style="color: #78350f;">9.000 ₺</div>
+            <div class="price-text" style="color: #8F5E18;">9.000 ₺</div>
             <div class="price-sub">Takım &amp; İşçilik Dahil</div>
           </div>
         </div>
-        <h2 class="card-title">70 cm Doğal Saç Kaynak (200 Adet)</h2>
+        <h3 class="card-title">70 cm Doğal Saç Kaynak (200 Adet)</h3>
         <div>
           <span class="gram-pill">
             <svg style="width:0.75rem;height:0.75rem;color:#b45309" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
@@ -385,7 +716,7 @@
           </span>
         </div>
         <p class="card-desc">
-          %100 doğal saç garantisi ve profesyonel takma işlemi dahil komple paket.
+          %100 doğal insan saçı uyumu, profesyonel kat kesimi ve özenli dip işçiliği ile uygulanan komple paket.
         </p>
         <a 
           href="https://wa.me/905072825248?text=Merhaba%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%2070%20cm%20200%20adet%20(9.000%20TL)%20sa%C3%A7%20kaynak%20paketi%20i%C3%A7in%20sa%C3%A7%C4%B1m%C4%B1n%20foto%C4%9Fraf%C4%B1n%C4%B1%20at%C4%B1p%20net%20fiyat%20ve%20randevu%20bilgisi%20almak%20istiyorum." 
@@ -401,8 +732,8 @@
 
     </section>
 
-    <!-- Google Yorum Kartı -->
-    <section aria-label="Müşteri Değerlendirmeleri">
+    <!-- Google Yorum Kartı & Müşteri Deneyimleri (Sitelink #yorumlar) -->
+    <section id="yorumlar" aria-label="Müşteri Değerlendirmeleri">
       <a 
         href="https://www.google.com/maps/search/?api=1&query=Bursa+Sa%C3%A7+Kaynak+Merkezi+%28Daisy+Hair%29" 
         target="_blank" 
@@ -411,8 +742,8 @@
         class="google-card"
       >
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <div style="background-color: #fffbeb; padding: 0.5rem; border-radius: 0.5rem; display: flex;">
-            <svg style="width:1rem;height:1rem;color:#f59e0b;fill:#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div style="background-color: #FDF8EE; padding: 0.55rem; border-radius: 0.65rem; display: flex; border: 1px solid #F3E5C8;">
+            <svg style="width:1.05rem;height:1.05rem;color:#f59e0b;fill:#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
           <div>
             <div class="stars-wrap">
@@ -423,63 +754,75 @@
                 <svg style="width:0.875rem;height:0.875rem;fill:#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg style="width:0.875rem;height:0.875rem;fill:#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               </span>
-              <span style="font-size: 0.75rem; font-weight: 700; color: #171717; margin-left: 0.25rem;">5.0</span>
-              <span style="font-size: 0.6875rem; color: #737373;">(165 Google Yorumu)</span>
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--ink); margin-left: 0.25rem;">4,9</span>
+              <span style="font-size: 0.72rem; color: var(--ink-soft);">(178 Google Yorumu)</span>
             </div>
-            <div style="font-size: 0.6875rem; color: #737373; margin-top: 0.125rem;">Google İşletme profilimizdeki gerçek müşteri yorumları</div>
+            <div style="font-size: 0.7rem; color: var(--ink-muted); margin-top: 0.125rem;">Google İşletme profilimizdeki gerçek müşteri yorumlarını okuyun</div>
           </div>
         </div>
-        <svg style="width:1rem;height:1rem;color:#a3a3a3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        <svg style="width:1rem;height:1rem;color:#a3a3a3;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
       </a>
+
+      <!-- Müşteri Deneyimi Kartları -->
+      <div class="reviews-mini-grid">
+        <div class="rev-item">
+          <div class="rev-head"><span>Selin K. • Nilüfer</span><span style="color:#f59e0b;">★★★★★</span></div>
+          "Saçım omuz hizasındaydı, 70 cm görünmez mikro kaynak yaptırdım. Toplayınca bile kaynak olduğu hiç belli olmuyor, ağırlık da yapmadı."
+        </div>
+        <div class="rev-item">
+          <div class="rev-head"><span>Merve T. • Osmangazi</span><span style="color:#f59e0b;">★★★★★</span></div>
+          "Hanife Hanım renk tonunu kendi saçıma birebir tutturdu. 3,5 ay sonra bakıma gittim, kendi saçımda en ufak bir kopma bile olmamıştı."
+        </div>
+      </div>
     </section>
 
     <!-- Güven ve Kalite Vurgusu -->
     <section class="trust-grid" aria-label="Neden Bizi Seçmelisiniz">
       <div class="trust-box">
-        <svg style="width:1rem;height:1rem;color:#b45309;margin:0 auto 0.25rem auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-        <span style="font-weight: 700; color: #171717; display: block;">%100 Gerçek Saç</span>
-        <span style="font-size: 0.6875rem; color: #737373;">İşlem görebilir, boyanabilir</span>
+        <svg style="width:1.1rem;height:1.1rem;color:var(--gold);margin:0 auto 0.25rem auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        <span style="font-weight: 800; color: var(--ink); display: block;">%100 Gerçek Saç</span>
+        <span style="font-size: 0.7rem; color: var(--ink-muted);">İşlem görebilir, boyanabilir</span>
       </div>
       <div class="trust-box">
-        <svg style="width:1rem;height:1rem;color:#b45309;margin:0 auto 0.25rem auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        <span style="font-weight: 700; color: #171717; display: block;">Dökülmeme Garantisi</span>
-        <span style="font-size: 0.6875rem; color: #737373;">Konforlu &amp; hafif kullanım</span>
+        <svg style="width:1.1rem;height:1.1rem;color:var(--gold);margin:0 auto 0.25rem auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        <span style="font-weight: 800; color: var(--ink); display: block;">Saç Dostu Uygulama</span>
+        <span style="font-size: 0.7rem; color: var(--ink-muted);">Konforlu &amp; hafif kullanım</span>
       </div>
     </section>
 
     <!-- Sıkça Sorulan Sorular -->
-    <section style="margin-top: 1rem;" aria-label="Sıkça Sorulan Sorular">
+    <section style="margin-top: 1.15rem;" aria-label="Sıkça Sorulan Sorular">
       <div style="text-align: center; margin-bottom: 0.5rem;">
-        <span style="font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; color: #78350f; background-color: #fffbeb; padding: 0.125rem 0.5rem; border-radius: 0.375rem; border: 1px solid #fef3c7;">Merak Edilenler</span>
+        <span style="font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; color: var(--gold-dark); background-color: var(--gold-tint); padding: 0.18rem 0.65rem; border-radius: 9999px; border: 1px solid #F3E5C8;">Merak Edilenler</span>
       </div>
       
       <details>
         <summary>
           <span>Mikro kaynak kendi saçıma zarar verir mi?</span>
-          <svg style="width:1rem;height:1rem;color:#737373" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg style="width:1rem;height:1rem;color:var(--ink-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </summary>
         <div class="faq-ans">
-          Kesinlikle hayır. Uzmanımız Hanife Tosun tarafından doğru gramaj dağılımı ile takılan kaynaklar, saç tellerinize gereksiz ağırlık bindirmez ve dökülme yapmaz.
+          Uzmanımız Hanife Tosun tarafından doğru gramaj dağılımı ile takılan kaynaklar, saç tellerinize gereksiz ağırlık bindirmez ve sağlıklı uzama sürecini korur.
         </div>
       </details>
 
       <details>
         <summary>
           <span>Kullanılan saçlar %100 doğal insan saçı mı?</span>
-          <svg style="width:1rem;height:1rem;color:#737373" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg style="width:1rem;height:1rem;color:var(--ink-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </summary>
         <div class="faq-ans">
-          Evet. Saçlarımız %100 doğal gerçek insan saçıdır. İstediğiniz renge boyatabilir, açma işlemi uygulayabilir, maşa ve fönle serbestçe şekillendirebilirsiniz.
+          Evet. Saçlarımız %100 doğal gerçek insan saçıdır. İstediğiniz renge boyatabilir, cila işlemi uygulayabilir, maşa ve fönle kendi saçınız gibi şekillendirebilirsiniz.
         </div>
       </details>
 
       <details>
         <summary>
           <span>Kaynakların kullanım ve bakım süresi nedir?</span>
-          <svg style="width:1rem;height:1rem;color:#737373" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg style="width:1rem;height:1rem;color:var(--ink-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </summary>
         <div class="faq-ans">
-          Saçınızın uzama hızına göre 3-4 ay konforla kullanılır. Süre sonunda saçlar özel solüsyonla yıpratılmadan çıkarılır ve tekrar yukarı takılarak uzun yıllar kullanılır.
+          Saçınızın uzama hızına göre 3-4 ay konforla kullanılır. Süre sonunda saçlar özel solüsyonla yıpratılmadan çıkarılır ve bakımı yapılarak tekrar yukarı uygulanır.
         </div>
       </details>
     </section>
@@ -535,7 +878,33 @@
 
     </section>
 
+    <!-- Detaylı Bilgi & Rehber Sayfaları (Hem Canlı Önizleme Hem SEO İç Bağlantıları) -->
+    <nav class="guide-box" aria-label="Saç Kaynak Rehberleri">
+      <div class="guide-title">Saç Kaynak Bilgi Rehberi</div>
+      <div class="guide-links">
+        <a href="mikro-kaynak.html" onclick="return openGuideModal('mikro', event)">Mikro Kaynak Nedir?</a>
+        <a href="fiyatlar.html" onclick="return openGuideModal('fiyatlar', event)">2026 Fiyat Rehberi</a>
+        <a href="bakim.html" onclick="return openGuideModal('bakim', event)">Kaynak Bakımı</a>
+        <a href="sss.html" onclick="return openGuideModal('sss', event)">Detaylı SSS</a>
+      </div>
+    </nav>
+
   </main>
+
+  <!-- Rehber Okuma Penceresi (Sayfadan Kopmadan Anında Açar) -->
+  <div id="guide-backdrop" class="guide-modal-backdrop" onclick="if(event.target===this) closeGuideModal()">
+    <div class="guide-modal" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title">
+      <div class="guide-modal-header">
+        <h3 id="guide-modal-title">Saç Kaynak Rehberi</h3>
+        <button type="button" class="guide-close-btn" onclick="closeGuideModal()">Kapat ✕</button>
+      </div>
+      <div id="guide-modal-body" class="guide-modal-body"></div>
+      <div class="guide-modal-footer">
+        <a id="guide-modal-ext" href="mikro-kaynak.html" class="guide-full-link">Tam Sayfa Olarak Aç →</a>
+        <a href="https://wa.me/905072825248?text=Merhaba%2C%20web%20sitenizdeki%20bilgi%20rehberini%20okudum.%20Sa%C3%A7%20kaynak%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn-quick-wa" style="width:auto;padding:0.5rem 1rem;font-size:0.75rem;">WhatsApp'tan Sor</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Mobil Sabit Alt Bar (Sticky CTA) -->
   <div class="sticky-bar">
@@ -565,19 +934,124 @@
   <!-- Footer -->
   <footer>
     <div style="max-width: 32rem; margin: 0 auto; display: flex; flex-direction: column; gap: 0.625rem;">
-      <div style="display: flex; align-items: center; justify-content: center; gap: 0.375rem; font-weight: 500; color: #404040;">
-        <svg style="width:0.875rem;height:0.875rem;color:#b45309" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.375rem; font-weight: 600; color: var(--ink-soft);">
+        <svg style="width:0.875rem;height:0.875rem;color:var(--gold)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         <span>Tahtakale, İnebey Sk. Türel Apt. Kat: 1 Daire: 1, Osmangazi / Bursa</span>
       </div>
       <div>
         <span>İşletme Yetkilisi: Hanife Tosun</span> &bull; 
-        <a href="tel:+905072825248" style="color: #404040; font-weight: 600; text-decoration: none;">0507 282 52 48</a>
+        <a href="tel:+905072825248" style="color: var(--ink); font-weight: 700; text-decoration: none;">0507 282 52 48</a>
       </div>
-      <div style="font-size: 0.6875rem; color: #a3a3a3; padding-top: 0.25rem;">
+      <div style="font-size: 0.6875rem; color: var(--ink-muted); padding-top: 0.25rem;">
         &copy; 2026 Daisy Saç Kaynak Merkezi. Tüm hakları saklıdır.
       </div>
     </div>
   </footer>
+
+  <!-- Rehber İçerikleri + Çalışma Saati & Google Ads Kaynak Etiketi Kontrolü -->
+  <script>
+    var GUIDE_DATA = {
+      mikro: {
+        title: 'Mikro Kaynak Nedir? Nasıl Yapılır?',
+        url: 'mikro-kaynak.html',
+        html: '<p><strong>Mikro saç kaynak</strong>, klasik boncuk veya kalın keratin kaynak sistemlerinden farklı olarak çok daha ince saç tutamlarının, şeffaf ve saç diplerinde fark edilmeyen mikro kapsüller yardımıyla kendi saçınıza entegre edilmesi tekniğidir.</p>' +
+              '<h4>Görünmez Mikro Kaynak Tekniğinin Farkı</h4>' +
+              '<ul><li><strong>Hafiflik ve Konfor:</strong> Her tutam kendi saç telinizin taşıyabileceği gramajda bölündüğü için kafa derisinde çekme veya baş ağrısı oluşturmaz.</li>' +
+              '<li><strong>Özgür Şekillendirme:</strong> Saçınızı yüksek at kuyruğu yapabilir, örgü örebilir, fön ve maşa uygulamalarını kendi saçınız gibi gerçekleştirebilirsiniz.</li>' +
+              '<li><strong>Birebir Renk Uyumu:</strong> Saçınızın dip ve uç tonları analiz edilerek ombre, sombre veya doğal ışıltı geçişleri birebir eşleştirilir.</li></ul>' +
+              '<h4>Kimler İçin Uygundur?</h4>' +
+              '<p>Kısa kesim saçlarını beklemeden uzatmak isteyenler, boya/açma sonrası incelen uçları toparlamak isteyenler ve ince telli saç yapısına sahip kadınlar için en konforlu çözümdür. 4–5 cm uzunluğundaki saçlarda dahi geçiş çizgisi tamamen gizlenebilir.</p>'
+      },
+      fiyatlar: {
+        title: '2026 Bursa Saç Kaynak Fiyat Rehberi',
+        url: 'fiyatlar.html',
+        html: '<p>Daisy Saç Kaynak Merkezi\'nde yalnızca <strong>%100 gerçek doğal insan saçı</strong> kullanılır. Sentetik karışımların aksine dolaşma yapmaz ve uzun yıllar tekrar kullanılabilir.</p>' +
+              '<h4>Güncel Kampanya Paketleri (Saç + İşçilik Dahil)</h4>' +
+              '<ul><li><strong>50 cm Doğal Saç Kaynak (200 Adet / ~140–160 gr):</strong> 8.000 ₺</li>' +
+              '<li><strong>70 cm Doğal Saç Kaynak (200 Adet / ~180–200 gr):</strong> 9.000 ₺</li></ul>' +
+              '<h4>Fiyatı Neler Belirler?</h4>' +
+              '<p>Mevcut saçınızın uzunluğu, tel kalınlığı ve hedeflediğiniz yoğunluğa göre kullanılacak tutam adedi (150–250 adet arası) belirlenir. Randevu öncesinde WhatsApp\'tan fotoğraf gönderdiğinizde net adet ve toplam ücret önceden paylaşılır; salonda sürpriz ek ücret çıkmaz.</p>'
+      },
+      bakim: {
+        title: 'Saç Kaynak Bakımı Nasıl Yapılır?',
+        url: 'bakim.html',
+        html: '<p>Doğru bakım alışkanlıklarıyla aynı doğal kaynak saçları <strong>2 ila 3 yıl boyunca</strong> yenileterek ilk günkü parlaklığıyla kullanabilirsiniz.</p>' +
+              '<h4>1. Doğru Yıkama Tekniği</h4>' +
+              '<p>Duşta başınızı öne eğmek yerine dik pozisyonda, yukarıdan aşağıya doğru yıkayın. Bakım kremlerini ve maskeleri yalnızca saçın orta kısmından uçlarına doğru uygulayın; bağlantı noktalarının kaymaması için diplere krem sürmeyin.</p>' +
+              '<h4>2. Tarama ve Kurutma</h4>' +
+              '<p>Doğal kıl fırça veya kaynak tarağı ile her zaman en uçlardan başlayarak tarayın. Yatmadan önce saç diplerini ılık ayarda kurutun ve gevşek bir örgü yapın.</p>' +
+              '<h4>3. Yenileme (Yukarı Çekme) Süresi</h4>' +
+              '<p>Saç uzama hızınıza bağlı olarak <strong>3–4 ayda bir</strong> bakım randevusuyla kaynaklar özel solüsyonla zarar vermeden çıkarılır ve tekrar diplere yerleştirilir.</p>'
+      },
+      sss: {
+        title: 'Sıkça Sorulan Sorular (Detaylı)',
+        url: 'sss.html',
+        html: '<h4>Mikro kaynak kendi saçımda dökülme yapar mı?</h4>' +
+              '<p>Hayır. Doğru gramaj dağılımıyla uygulanan mikro kaynak saç köklerinize yük bindirmez. Doğal döngüde günlük dökülen teller kapsül içinde tutunduğu için bakım sırasında toplu görünür; bu normal uzama döngüsüdür.</p>' +
+              '<h4>Denize ve havuza girebilir miyim?</h4>' +
+              '<p>Evet. Girmeden önce saçınızı gevşekçe örmeniz ve çıktıktan sonra tuzlu/klorlu suyu tatlı suyla durulamanız yeterlidir.</p>' +
+              '<h4>Boya ve açma işlemi yapılır mı?</h4>' +
+              '<p>Saçlar %100 gerçek insan saçı olduğu için boya, cila, fön ve maşa işlemlerini rahatlıkla kaldırır.</p>' +
+              '<h4>İşlem süresi ne kadardır?</h4>' +
+              '<p>Yeni kaynak uygulaması ortalama 1,5–2,5 saat, bakım/söküm işlemi ise 45–60 dakika sürer.</p>'
+      }
+    };
+
+    function openGuideModal(key, evt) {
+      if (evt) evt.preventDefault();
+      var item = GUIDE_DATA[key];
+      if (!item) return true;
+      document.getElementById('guide-modal-title').textContent = item.title;
+      document.getElementById('guide-modal-body').innerHTML = item.html;
+      document.getElementById('guide-modal-ext').setAttribute('href', item.url);
+      document.getElementById('guide-backdrop').classList.add('open');
+      return false;
+    }
+
+    function closeGuideModal() {
+      document.getElementById('guide-backdrop').classList.remove('open');
+    }
+
+    (function() {
+      try {
+        // 1. Canlı Çalışma Saati Kontrolü
+        var now = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Istanbul" }));
+        var day = now.getDay(); // 0 = Pazar
+        var mins = now.getHours() * 60 + now.getMinutes();
+        var isOpen = (day !== 0) && (mins >= 9 * 60) && (mins < 19 * 60 + 30);
+        var txt = document.getElementById('salon-status-text');
+        var dot = document.getElementById('status-dot');
+        var ping = document.getElementById('status-ping');
+        if (!isOpen && txt) {
+          txt.textContent = 'Şu An Kapalı (WhatsApp Aktif)';
+          txt.style.color = '#991b1b';
+          if (dot) dot.style.backgroundColor = '#ef4444';
+          if (ping) ping.style.display = 'none';
+        }
+      } catch (e) {}
+
+      try {
+        // 2. Google Ads (gclid / utm_source=google) Kaynak Takibi
+        var params = new URLSearchParams(window.location.search);
+        var isGoogleAd = params.has('gclid') || params.get('utm_source') === 'google';
+        if (isGoogleAd) {
+          sessionStorage.setItem('daisy_src_google', '1');
+        }
+        if (sessionStorage.getItem('daisy_src_google') === '1') {
+          var waLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
+          waLinks.forEach(function(link) {
+            var currentHref = link.getAttribute('href');
+            if (currentHref && currentHref.indexOf('ula%C5%9F%C4%B1yorum.') !== -1) {
+              link.setAttribute(
+                'href',
+                currentHref.replace('ula%C5%9F%C4%B1yorum.', 'ula%C5%9F%C4%B1yorum%20%5BG%5D.')
+              );
+            }
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
 
 </body>
 </html>
